@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="centrar">
+      Cálculos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title class="centrar" size="large">Cálculos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card class="centrar">
+      <ion-label position="stacked">Ingrese el monto a cotizar</ion-label>
+      <ion-item>
+        <ion-select [(ngModel)]="monedaOrigen" interface="popover" placeholder="Moneda">
+          <ion-select-option *ngFor="let moneda of monedas" value="{{moneda.simbolo}}" class="centra">{{moneda.simbolo}}
+          </ion-select-option>
+        </ion-select>
+        <!-- <span [ngClass]="'flag-icon flag-icon-ar'"></span> -->
+        <ion-input [(ngModel)]="valorACotizar" type="number" name="valorACotizar" placeholder="Monto" class="centrar"></ion-input>
+      </ion-item>
+  </ion-card>
+  <div class="centrar">
+    <ion-button (click)="convertir()" [disabled]="!valorACotizar">Obtener cotizaciones</ion-button>
+  </div>
+  
+
+  <ion-card class="centrar">
+      <ion-label position="stacked">Cotización 1</ion-label>
+      <ion-item>
+        <ion-select [(ngModel)]="monedaDestino1" interface="popover" placeholder="Moneda">
+          <ion-select-option *ngFor="let moneda of monedas" value="{{moneda.simbolo}}">{{moneda.simbolo}}
+          </ion-select-option>
+        </ion-select>
+        <ion-label class="centrar">{{cotizacion1}}</ion-label>
+      </ion-item>
+  </ion-card>
+
+  <ion-card class="centrar">
+    <ion-label position="stacked">Cotización 2</ion-label>
+    <ion-item>
+      <ion-select [(ngModel)]="monedaDestino2" interface="popover" placeholder="Moneda">
+        <ion-select-option *ngFor="let moneda of monedas" value="{{moneda.simbolo}}">{{moneda.simbolo}}
+        </ion-select-option>
+      </ion-select>
+      <ion-label class="centrar">{{cotizacion2}}</ion-label>
+    </ion-item>
+</ion-card>
+</ion-content>
