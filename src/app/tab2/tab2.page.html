@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="centra">
+      Cotizaciones
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title class="centra" size="large">Cotizaciones</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card class="centrar">
+    <ion-label position="stacked">Seleccione moneda base</ion-label>
+    <ion-item>
+      <ion-label>Moneda</ion-label>
+      <ion-select [(ngModel)]="monedaOrigen" interface="popover" placeholder="Seleccionar">
+        <ion-select-option *ngFor="let moneda of monedas" value="{{moneda.simbolo}}">{{moneda.simbolo}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+  <div class="centrar">
+    <ion-button (click)="convertir()" [disabled]="!monedaOrigen">Obtener cotizaciones</ion-button>
+  </div>
+  <ion-card class="centrar">
+    <ion-list>
+      <ion-label class="encabezado">Moneda</ion-label>
+      <ion-label class="encabezado">Tasa</ion-label>
+      <ion-item *ngFor="let moneda of monedas">
+        <ion-label class="centra"><span [ngClass]="moneda.flag"></span> {{moneda.simbolo}}</ion-label>
+        <ion-label class="centra">{{moneda.rate}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

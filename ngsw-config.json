@@ -1,0 +1,592 @@
+{
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/manifest.webmanifest",
+          "/*.css",
+          "/*.js"
+        ]
+      }
+    }, {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/USD"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/EUR"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/GBP"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/ARS"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/AED"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/AUD"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/BGN"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/BRL"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/BSD"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/CAD"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/CHF"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/CLP"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/CNY"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/COP"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/CZK"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/DKK"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/DOP"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/EGP"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/FJD"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/GTQ"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/HKD"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/HRK"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/HUF"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/IDR"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/ILS"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/INR"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/ISK"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/JPY"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/KRW"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/KZT"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/MXN"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/MYR"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/NOK"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/NZD"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/PAB"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/PEN"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/PHP"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/PKR"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/PLN"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/PYG"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/RON"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/RUB"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/SAR"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/SEK"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/SGD"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/THB"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/TRY"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/TWD"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/UAH"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/UYU"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  },
+  {
+    "name": "api-performance",
+    "urls": [
+      "https://prime.exchangerate-api.com/v5/18381a63013780948ba02f4e/latest/ZAR"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": "12h"
+    }
+  }
+]
+}

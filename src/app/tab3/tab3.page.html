@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="centrar">
+      Monedas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title class="centrar" size="large">Monedas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- <ion-card class="centrar">
+    <ion-grid class="centrar">
+      <ion-row>
+        <ion-col>Código</ion-col>
+        <ion-col size="4">Nombre</ion-col>
+        <ion-col size="4">País/Región</ion-col>
+        <ion-col>Bandera</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let moneda of monedas">
+        <ion-col class="nombre">{{moneda.simbolo}}</ion-col>
+        <ion-col class="nombre">{{moneda.nombre}}</ion-col>
+        <ion-col class="nombre">{{moneda.nombrePais}}</ion-col>
+        <ion-col class="centrar"><span [ngClass]="moneda.flag"></span></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card> -->
+  
+  <ion-card class="centrar">
+    <ion-list class="centrar">
+      <ion-list-header>
+        <ion-label>Código</ion-label>
+        <ion-label>Nombre</ion-label>
+        <ion-label>País/Región</ion-label>
+        <ion-label>Bandera</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor="let moneda of monedas">
+        <ion-label class="nombre">{{moneda.simbolo}}</ion-label>
+        <ion-label class="nombre">{{moneda.nombre}}</ion-label>
+        <ion-label class="nombre">{{moneda.nombrePais}}</ion-label>
+        <ion-label class="centrar"><span [ngClass]="moneda.flag"></span></ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
